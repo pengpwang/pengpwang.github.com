@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 王朋朋de博客 - 时间看得见
 subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+description: 王朋朋的博客，现实的理想主义者
+keywords: 
+author: 王朋朋<329109929@qq.com>
+language: zh-CN
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://pengpwang.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
