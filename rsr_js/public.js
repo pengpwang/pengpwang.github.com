@@ -63,3 +63,47 @@ document.writeln("<a id=\"jsq\" href=\"calculator.html\" target=\"_blank\" title
     };
 };*/
 //
+
+
+
+$(function(){
+    // --footer--
+    $('.n_footer-tm_sel-btn span').mouseover(function(){
+        $('.n_footer-tm_sel-btn span').removeClass('n_footer-tm_sel-btn-active');
+        $('.n_footer-tm_sel-item').removeClass('active');
+        $('.n_footer-tm_sel-btn span').eq($(this).index()).addClass('n_footer-tm_sel-btn-active');
+        $('.n_footer-tm_sel-item').eq($(this).index()).addClass('active');
+    });
+
+    var href = window.location.href;
+    var active3_arr = ['honor.html', 'media_list.html', 'dynamic_list.html', 'marketing_list.html', 'marketing_con', 'shbx_', 'dynamic_list', 'xcgl_', 'media_', ''];
+    var isActive3 = false;
+
+    for(let i = 0; i < active3_arr.length; i++){
+        if(href.indexOf(active3_arr[i]) > 0){
+            isActive3 = true;
+            break;
+        }
+    }
+
+    // nav
+    $('.n_header-item_wrap .n_header-item_wrap-sel').removeClass('active')
+    if(href.indexOf('index.html') > 0){
+        $('.n_header-item_wrap .n_header-item_wrap-sel').eq(0).addClass('active');
+    }else if(href.indexOf('solution.html') > 0){
+        $('.n_header-item_wrap .n_header-item_wrap-sel').eq(2).addClass('active');
+    }else if(isActive3){
+        $('.n_header-item_wrap .n_header-item_wrap-sel').eq(3).addClass('active');
+    }else if(href.indexOf('about_us.html') > 0){
+        $('.n_header-item_wrap .n_header-item_wrap-sel').eq(4).addClass('active');
+    }else{
+        if(href.indexOf('.html') > 0){
+            $('.n_header-item_wrap .n_header-item_wrap-sel').eq(1).addClass('active');
+        }else{
+            $('.n_header-item_wrap .n_header-item_wrap-sel').eq(0).addClass('active');
+        }
+    }
+});
+
+
+
